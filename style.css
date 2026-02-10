@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400;600;700&display=swap');
+
+* {
+    font-family: 'Source Serif Pro', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background: whitesmoke;
+}
+
+html::-webkit-scrollbar {
+    width: 8px;
+}
+html::-webkit-scrollbar-thumb {
+    background: #af3120;
+    border-radius: 50px;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.portrait {
+    flex: 0 0 220px;
+    padding: 20px;
+    text-align: center;
+    border-right: 2px solid #eee;
+    position: sticky;
+    top: 20px;
+}
+
+.portrait img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.portrait h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.portrait p {
+    color: #af3120;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.partage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.partage a {
+    width: 32px;
+    height: 32px;
+    background: whitesmoke;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partage a:hover {
+    background: #af3120;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-bottom: 15px;
+    background: #af3120;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.btn:hover {
+    background: black;
+}
+
+.contact {
+    margin-top: 15px;
+}
+.contact h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.contact .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+.contact .box {
+    flex: 1 1 80px;
+    background: whitesmoke;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+}
+.contact .box i {
+    font-size: 16px;
+    color: white;
+    background: #af3120;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+.contact .box p {
+    font-size: 12px;
+    color: grey;
+}
+
+.informations {
+    flex: 1 1 auto;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.titre {
+    font-size: 18px;
+    color: #af3120;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.box-container .box {
+    flex: 1 1 200px;
+    background: whitesmoke;
+    padding: 10px;
+    border-radius: 6px;
+}
+.box-container .box h3 {
+    font-size: 14px;
+    margin: 3px 0;
+}
+.box-container .box p {
+    font-size: 13px;
+    color: grey;
+    line-height: 1.4;
+}
+
+.tools .box-container .box {
+    flex: 1 1 calc(33% - 10px);
+    text-align: center;
+}
+.tools .box img {
+    height: 35px;
+    margin-bottom: 5px;
+}
+.tools .box p {
+    font-size: 13px;
+}
+
+.skills .progrès p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.skills .bar {
+    height: 8px;
+    background: whitesmoke;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.skills .bar span {
+    display: block;
+    height: 100%;
+    background: #af3120;
+    border-radius: 50px;
+}
+
+@media (max-width: 900px) {
+    .container { flex-direction: column; max-width: 95%; margin: 30px auto; }
+    .portrait { position: relative; top: 0; border-right: none; margin-bottom: 15px; }
+    .box-container .box { flex: 1 1 100%; }
+    .tools .box-container .box { flex: 1 1 30%; margin-bottom: 10px; }
+}
+@media (max-width: 600px) {
+    .portrait img { width: 100px; height: 100px; }
+    .portrait h1 { font-size: 18px; }
+    .portrait p, .informations p { font-size: 13px; }
+    .tools .box-container .box { flex: 1 1 45%; }
+}
